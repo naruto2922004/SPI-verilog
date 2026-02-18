@@ -1,10 +1,10 @@
-module SLAVE_test;
+module SLAVE1_test;
 reg MOSI, SCLK, CS, reset, CLK;
 reg [7:0]data_in;	
 wire MISO, done;
 wire [7:0]rx;
 
-SLAVE ins(MOSI, SCLK, CS, reset, CLK, data_in, MISO, done, rx);
+SLAVE1 ins(MOSI, SCLK, CS, reset, CLK, data_in, MISO, done, rx);
 parameter mode= 2'd2;//[CPOL, CPHA]
 
 always #5 CLK = ~CLK;
@@ -47,3 +47,4 @@ MOSI= 0;
 #20;
 end
 endmodule
+
