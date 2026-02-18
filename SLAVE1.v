@@ -1,5 +1,5 @@
 
-module SLAVE(
+module SLAVE1(
     input  MOSI, SCLK, CS, reset, CLK,
     input [7:0]data_in,
     output reg MISO,
@@ -79,3 +79,4 @@ module SLAVE(
 
 assign done= (count==5'd16);  
 endmodule
+
