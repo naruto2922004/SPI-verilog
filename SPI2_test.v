@@ -1,4 +1,4 @@
-module NEW_test;
+module SPI2_test;
 reg transmit, CLK_M, reset, d_valid, load;
 wire MISO;
 reg [7:0] data_M;
@@ -9,7 +9,7 @@ MASTER ins1(transmit, MISO, CLK_M, reset, d_valid, data_M, MOSI, SCLK, CS, done_
 reg [7:0]data_S;
 wire done_S;
 wire [7:0]rx_S;
-NEW_SLAVE ins2(MOSI, SCLK, CS, load, data_S, MISO, done_S, rx_S);
+SLAVE2 ins2(MOSI, SCLK, CS, load, data_S, MISO, done_S, rx_S);
 
 always #5 CLK_M = ~CLK_M;
 
@@ -33,4 +33,5 @@ data_S = 8'b0;
 #10;
 end
 endmodule
+
 
