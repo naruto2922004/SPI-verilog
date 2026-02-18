@@ -1,4 +1,4 @@
-module NEW_SLAVE(
+module SLAVE2(
         input MOSI, SCLK, CS, load,
         input [7:0]data_in,
         output reg MISO,
@@ -78,3 +78,4 @@ end
 
 endmodule
   
+
